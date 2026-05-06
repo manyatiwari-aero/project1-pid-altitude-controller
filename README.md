@@ -29,26 +29,26 @@ adjusts thrust to maintain the target altitude.
 No controller. Constant thrust causes altitude to grow 
 to infinity. This is the problem being solved.
 
-![uncontrolled drone](droneplant.png)
+![uncontrolled drone](droneplant.fig)
 
 ### Step 2 — P controller only
 Adding proportional control stops infinite growth but 
 causes sustained oscillation — drone bounces around 
 target forever without settling.
 
-![p controller](pcontroller.png)
+![p controller](pcontroller.fig)
 
 ### Step 3 — P + D controller
 Adding derivative term damps the oscillations. 
 Drone begins to settle but steady state error remains.
 
-![pd controller](p+dcontroller.png)
+![pd controller](p+dcontroller.fig)
 
 ### Step 4 — Full PID controller (best result)
 Adding integral term eliminates steady state error. 
 Drone rises and settles exactly at target altitude.
 
-![full pid](BLOCK_4_PID(5,1,6).png)
+![full pid](BLOCK_4_PID(5,1,6).fig)
 
 ## Results — gain tuning comparison
 
@@ -75,11 +75,11 @@ PID Tuning · Step Response Analysis · stepinfo() · Feedback Control
 
 ## Files
 - `pid_exploration.m` — complete simulation with all 4 blocks
-- `simplesystem.png` — Block 1 stable test system
-- `droneplant.png` — Block 2 uncontrolled drone
-- `pcontroller.png` — Block 3 P-only controller
-- `p+dcontroller.png` — P+D controller
-- `BLOCK_4_PID.png` — Full PID Kp=5 Ki=1 Kd=3
-- `BLOCK_4_PID(8,2,4).png` — Full PID Kp=8 Ki=2 Kd=4
-- `BLOCK_4_PID(5,1,6).png` — Full PID Kp=5 Ki=1 Kd=6 (best)
-- `BLOCK_4_PID(3,0.5,5).png` — Full PID Kp=3 Ki=0.5 Kd=5
+- `simplesystem.fig` — Block 1 stable test system
+- `droneplant.fig` — Block 2 uncontrolled drone
+- `pcontroller.fig` — Block 3 P-only controller
+- `p+dcontroller.fig` — P+D controller
+- `BLOCK_4_PID.fig` — Full PID Kp=5 Ki=1 Kd=3
+- `BLOCK_4_PID(8,2,4).fig` — Full PID Kp=8 Ki=2 Kd=4
+- `BLOCK_4_PID(5,1,6).fig` — Full PID Kp=5 Ki=1 Kd=6 (best)
+- `BLOCK_4_PID(3,0.5,5).fig` — Full PID Kp=3 Ki=0.5 Kd=5
