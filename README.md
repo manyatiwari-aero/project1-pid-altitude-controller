@@ -83,3 +83,22 @@ PID Tuning · Step Response Analysis · stepinfo() · Feedback Control
 - `BLOCK_4_PID(8,2,4).fig` - Full PID Kp=8 Ki=2 Kd=4
 - `BLOCK_4_PID(5,1,6).fig` - Full PID Kp=5 Ki=1 Kd=6 (best)
 - `BLOCK_4_PID(3,0.5,5).fig` - Full PID Kp=3 Ki=0.5 Kd=5
+
+
+## Simulink Implementation
+
+The same PID controller was rebuilt visually in 
+Simulink using the built-in PID Controller block.
+
+**Gains used:** P=5 · I=1 · D=6 · Filter=100
+
+### Simulink block diagram
+![simulink blocks](simulink_block_diagram.png)
+
+### Simulink step response
+![simulink response](simulink_step_response.png)
+
+**Result:** System rises in under 1 second with 
+approximately 8% overshoot and settles exactly 
+at target altitude — consistent with MATLAB 
+code implementation.
